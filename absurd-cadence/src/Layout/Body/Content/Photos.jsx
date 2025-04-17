@@ -2,11 +2,13 @@ import { ArrowCircleLeft, ArrowCircleRight } from '@phosphor-icons/react'
 import { AnimatePresence } from 'framer-motion'
 import React, { useState } from 'react'
 
-import photo1 from './../../../assets/photos/photo_bucket.png'
-import photo2 from './../../../assets/photos/photo_me.png'
+import photo1 from './../../../assets/photos/photo_1.png'
+import photo2 from './../../../assets/photos/photo_2.png'
+import photo3 from './../../../assets/photos/photo_3.png'
+import photo4 from './../../../assets/photos/photo_4.png'
 
 const Photos = () => {
-	const items = [photo1, photo2]
+	const items = [photo1, photo2, photo3, photo4]
 	const [selectedIndex, setSelectedIndex] = useState(0)
 	const [direction, setDirection] = useState(1)
 
@@ -25,8 +27,13 @@ const Photos = () => {
 
 	return (
 		<div className='w-full flex flex-col justify-center align-middle gap-6'>
-			<div className='w-full h-80 flex items-center justify-center relative'>
-				<AnimatePresence custom={direction} initial={false} mode='popLayout'>
+			<div className='w-full h-96 flex items-center justify-center relative'>
+				<AnimatePresence
+					custom={direction}
+					initial={false}
+					mode='popLayout'
+					className='bg-gray-700'
+				>
 					<img
 						key={currentImg}
 						src={currentImg}
@@ -43,19 +50,19 @@ const Photos = () => {
 				</AnimatePresence>
 			</div>
 			<div className='flex justify-between'>
-				<div className=''>img descriptions</div>
+				<div className='text-xl font-semibold'>Brooklyn, NY</div>
 				<div>
 					<button
 						aria-label='Previous'
 						onClick={() => setSlide(-1)}
-						className='cursor-pointer'
+						className='cursor-pointer transition-color active:text-[#B1C726]'
 					>
 						<ArrowCircleLeft size={26} />
 					</button>
 					<button
 						aria-label='Next'
 						onClick={() => setSlide(1)}
-						className='cursor-pointer'
+						className='cursor-pointer transition-color active:text-[#B1C726]'
 					>
 						<ArrowCircleRight size={26} />
 					</button>

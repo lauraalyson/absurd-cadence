@@ -1,9 +1,10 @@
-const Etc = () => {
+const Project = () => {
 	return (
-		<div>
-			<div className='text-xl font-semibold'>One More Widget. Etc.</div>
+		<div className='h-44'>
+			<div className='text-xl font-semibold pb-3'>Project</div>
+			<div className='text-2xl font-semibold '>Project Body</div>
 		</div>
 	)
 }
 
-export default Etc
+export default Project;

@@ -1,13 +1,14 @@
+import { gigasheet_link } from "../../../assets/links"
+
 const CurrentlyAt = () => {
 	return (
 		<div className='font-semibold'>
 			<div className='text-xl pb-3'>
 				Currently at{' '}
-				<span className='underline underline-offset-3'>Gigasheet</span>
+				<a href={gigasheet_link} target='__blank' className='underline underline-offset-3 hover:underline-offset-2'>Gigasheet</a>
 			</div>
 			<div className='text-2xl py-3'>
-				Building AI powered spreadsheets with large data models. This may even
-				be a bit longer.
+				Crafting performant, AI-driven spreadsheets, built for scale.
 			</div>
 		</div>
 	)
