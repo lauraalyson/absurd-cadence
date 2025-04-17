@@ -7,7 +7,7 @@ const OrderBlocks = ({ isChaosMode, setIsChaosMode }) => {
 			<button
 				onClick={() => setIsChaosMode(!isChaosMode)}
 				className={clsx(
-					'flex items-center justify-center w-8 h-8 hover:bg-[#646cff] hover:text-[#FAFFFD] rounded transition-all'
+					'hidden md:flex items-center justify-center w-8 h-8 hover:bg-[#646cff] hover:text-[#FAFFFD] rounded transition-all'
 				)}
 			>
 				{isChaosMode ? <GridFour size={26} /> : <SquaresFour size={26} />}
