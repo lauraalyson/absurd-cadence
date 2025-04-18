@@ -3,7 +3,7 @@ const Footer = () => {
     return (
 			<div
 				id='footer'
-				className='relative md:fixed py-8 w-full bottom-0 font-semibold text-xs'
+				className='relative md:fixed py-8 w-full bottom-0 font-semibold text-xs !hidden'
 			>
 				<div className='flex justify-between px-8'>
 					<div>(c) LW. 2025.</div>

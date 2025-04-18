@@ -24,7 +24,7 @@ const ContactLink = ({ title, link }) => {
 			<a
 				href={link}
 				target='__blank'
-				className='cursor-pointer font-semibold text-base sm:text-xl flex gap-2 align-middle items-center'
+				className='cursor-pointer font-semibold text-base md:text-xl flex gap-2 align-middle items-center'
 			>
 				{getIcon()}
 				{title}

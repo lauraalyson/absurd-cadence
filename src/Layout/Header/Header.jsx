@@ -10,7 +10,7 @@ const Header = ({
 	setCategory,
 }) => {
 	return (
-		<div className='flex p-8 fixed w-full font-medium justify-between items-center'>
+		<div className='text-center flex p-8 mb-3 w-full font-bold flex-row justify-center md:justify-between items-center'>
 			<Title />
 			<Navigation
 				isDarkMode={isDarkMode}
