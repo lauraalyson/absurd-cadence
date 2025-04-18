@@ -3,7 +3,7 @@ import { gigasheet_link } from "../../../assets/links"
 const CurrentlyAt = () => {
 	return (
 		<div className='font-semibold'>
-			<div className='text-base md:text-xl  pb-3'>
+			<div className='text-base md:text-xl pb-1 md:pb-3'>
 				Currently at{' '}
 				<a
 					href={gigasheet_link}

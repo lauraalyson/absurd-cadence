@@ -2,8 +2,8 @@ import { ArrowCircleLeft, ArrowCircleRight } from '@phosphor-icons/react'
 import { AnimatePresence } from 'framer-motion'
 import React, { useState } from 'react'
 
-import photo1 from './../../../assets/photos/photo_1.png'
-import photo2 from './../../../assets/photos/photo_2.png'
+import photo2 from './../../../assets/photos/photo_1.png'
+import photo1 from './../../../assets/photos/photo_2.png'
 import photo3 from './../../../assets/photos/photo_3.png'
 import photo4 from './../../../assets/photos/photo_4.png'
 
@@ -26,7 +26,7 @@ const Photos = () => {
 	const currentImg = items[selectedIndex]
 
 	return (
-		<div className='w-full flex flex-col justify-center align-middle gap-6'>
+		<div className='w-full flex flex-col justify-center align-middle gap-4 md:gap-6'>
 			<div className='w-full h-96 flex items-center justify-center relative'>
 				<AnimatePresence
 					custom={direction}
@@ -50,7 +50,7 @@ const Photos = () => {
 				</AnimatePresence>
 			</div>
 			<div className='flex justify-between'>
-				<div className='text-xl font-semibold'>Brooklyn, NY</div>
+				<div className='text-base md:text-xl font-semibold'>Brooklyn, NY</div>
 				<div>
 					<button
 						aria-label='Previous'

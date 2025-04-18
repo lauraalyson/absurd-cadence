@@ -24,7 +24,7 @@ const Body = ({ category, isChaosMode }) => {
 			body: <Spiral className='w-full h-full' />,
 			type: 'None',
 			position: { x: '22%', y: '17%' },
-			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-13 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 		{
 			key: 'Skills',
@@ -68,7 +68,7 @@ const Body = ({ category, isChaosMode }) => {
 			body: <AsteriskSimple className='w-full h-full' />,
 			type: 'None',
 			position: { x: '60%', y: '80%' },
-			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-13 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 		{
 			key: 'Currently At',
@@ -89,7 +89,7 @@ const Body = ({ category, isChaosMode }) => {
 			body: <Code className='w-full h-full' />,
 			type: 'None',
 			position: { x: '15%', y: '50%' },
-			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-13 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 		{
 			key: 'Github',
@@ -119,14 +119,14 @@ const Body = ({ category, isChaosMode }) => {
 			body: <Steps className='w-full h-full' />,
 			type: 'None',
 			position: { x: '50%', y: '45%' },
-			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-13 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 	]
 
 	return (
 		<div
 			id='body'
-			className='pt-28 pb-8 flex w-full h-full justify-center items-center align-middle'
+			className='md:py-10 pb-22 flex w-full h-full justify-center items-center align-middle'
 		>
 			{isChaosMode ? (
 				<div className='h-full w-full overflow-hidden'>
@@ -141,13 +141,13 @@ const Body = ({ category, isChaosMode }) => {
 					})}
 				</div>
 			) : (
-				<div className='md:w-1/3 md:min-w-96 md:max-w-lg max-w-96 w-auto mx-4 flex flex-wrap md:gap-4 gap-2 justify-between'>
+				<div className='md:min-w-96 md:max-w-lg max-w-96 w-auto flex flex-wrap md:gap-4 gap-3 justify-between mx-6'>
 					{blocks.map(({ key, className, type, body }) => {
 						return (
 							<motion.div
 								key={key}
 								className={clsx(
-									'min-h-14 md:min-h-16 flex items-center w-fit h-fit p-3 md:p-4 rounded',
+									'min-h-13 md:min-h-16 flex items-center w-fit h-fit p-3 md:p-4 rounded',
 									className,
 									!category?.includes(type) && category?.length
 										? '!opacity-5'

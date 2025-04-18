@@ -8,11 +8,10 @@ const Navigation = ({ isDarkMode, category, setCategory }) => {
 		<div
 			id='header'
 			className={clsx(
-				'w-fit flex justify-center',
-				isDarkMode ? 'text-[#FAFFFD]' : 'text-[#191716]'
+				'w-full md:w-fit flex md:!relative justify-center fixed bottom-4 md:top-1 right-auto !z-[100] text-inverted md:[text-[#FAFFFD]'
 			)}
 		>
-			<div className={clsx('cursor-default', 'flex gap-1')}>
+			<div className={clsx('cursor-default p-2 rounded w-fit backdrop-blur-lg  md:bg-transparent flex justify-center gap-1 w-56')}>
 				{headers.map((title) => {
 					return (
 						<button
