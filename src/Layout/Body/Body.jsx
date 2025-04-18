@@ -21,10 +21,10 @@ const Body = ({ category, isChaosMode }) => {
 	const blocks = [
 		{
 			key: 'Spiral',
-			body: <Spiral size={32} />,
+			body: <Spiral className='w-full h-full' />,
 			type: 'None',
 			position: { x: '22%', y: '17%' },
-			className: '!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 		{
 			key: 'Skills',
@@ -39,7 +39,7 @@ const Body = ({ category, isChaosMode }) => {
 			type: 'Work',
 			position: { x: '20%', y: '20%' },
 			className:
-				'min-w-96 bg-[#646cff] !w-full active:!ring-[#646cff] active:ring',
+				'md:min-w-96 bg-[#646cff] !w-full active:!ring-[#646cff] active:ring',
 		},
 		{
 			key: 'Project',
@@ -65,10 +65,10 @@ const Body = ({ category, isChaosMode }) => {
 		},
 		{
 			key: 'Asterick',
-			body: <AsteriskSimple size={32} />,
+			body: <AsteriskSimple className='w-full h-full' />,
 			type: 'None',
 			position: { x: '60%', y: '80%' },
-			className: '!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 		{
 			key: 'Currently At',
@@ -86,10 +86,10 @@ const Body = ({ category, isChaosMode }) => {
 		},
 		{
 			key: 'Code',
-			body: <Code size={32} />,
+			body: <Code className='w-full h-full' />,
 			type: 'None',
 			position: { x: '15%', y: '50%' },
-			className: '!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 		{
 			key: 'Github',
@@ -109,17 +109,17 @@ const Body = ({ category, isChaosMode }) => {
 
 		{
 			key: 'Availability',
-			body: <Availability size={32} />,
+			body: <Availability className='w-full h-full' />,
 			type: 'None',
 			position: { x: '34%', y: '76%' },
 			className: `${isChaosMode && '!w-fit'} !flex-grow bg-[#B1C726] active:!ring-[#B1C726] active:ring`,
 		},
 		{
 			key: 'Steps',
-			body: <Steps size={32} />,
+			body: <Steps className='w-full h-full' />,
 			type: 'None',
 			position: { x: '50%', y: '45%' },
-			className: '!w-16 bg-[#FAFFFD] text-[#191716]',
+			className: '!w-14 md:!w-16 bg-[#FAFFFD] text-[#191716]',
 		},
 	]
 
@@ -141,13 +141,13 @@ const Body = ({ category, isChaosMode }) => {
 					})}
 				</div>
 			) : (
-				<div className='w-1/3 min-w-96 max-w-lg flex flex-wrap gap-4 justify-between'>
+				<div className='md:w-1/3 md:min-w-96 md:max-w-lg max-w-96 w-auto mx-4 flex flex-wrap md:gap-4 gap-2 justify-between'>
 					{blocks.map(({ key, className, type, body }) => {
 						return (
 							<motion.div
 								key={key}
 								className={clsx(
-									'min-h-16 flex items-center w-fit h-fit p-4 rounded',
+									'min-h-14 md:min-h-16 flex items-center w-fit h-fit p-3 md:p-4 rounded',
 									className,
 									!category?.includes(type) && category?.length
 										? '!opacity-5'
